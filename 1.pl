@@ -10,11 +10,10 @@ Author: Vojtech Prusa
 =cut
 use strict;
 use warnings;
-# TODO:
 use Array::Utils qw(:all);
 use Data::Dumper qw(Dumper);
 
-use 5.016003; # current version, TODO update ...
+use 5.016003; # current version
 ########################################################################
 package SLog;
 use Data::Dumper qw(Dumper);
@@ -32,13 +31,6 @@ use constant {
   ALG_EVAL_GSWN_SUM_VN => 'ALG_EVAL_GSWN_SUM_VN',
   # => '',
 };
-
-# TODO: Here comment anyone line you do not want to log
-# Commenting 'L1b_L2A' but keeping 'L1b' will still log 'L1b_L2A' because of its prefix
-# current setup should Dump:
-=pod
-TODO
-=cut
 
 my @SHOULD_LOG = (
   # ALG,
@@ -76,9 +68,6 @@ sub Log {
 sub main {
   # https://www.fi.muni.cz/~hanka/ai/prusvitky/treti.pdf
   # ::7
-  # TODO:
-  # - its possible that i do smth bad with memory management, I was trying to keep as less memory as possible though...
-  # --> review & performance analyses needed
   evalEvolutionAlg();
 }
 
@@ -90,7 +79,6 @@ sub main {
 # nodeX => {nodeY=> d(nodeX, nodeY), ...}, ...
 # this results in duplicity of edge's weights
 # Note!: Eh, index from 1...
-# TODO ...
 # another way to store data as triplets where first 2 are vertices and third is weight
 # as in https://github.com/vprusa/MUNI-MA015-graph-algorithms/blob/e510fbe87b1c8d73f817fb13995bc3e3007f1ab3/algorithms/mst/directed/EdmondsBranching/EdmondsBranching.py#L13
 # g.e. Edges: [(1,2,4),(1,3,5),(1,4,3),(2,3,3),(2,4,5),(3,4,4)]
@@ -109,14 +97,15 @@ my $dV = 4;
 my $dM = 1;
 
 
-# TODO pass arguments from cmd line
 my %settings = (
   isTest                    => 0, # test disables initial randomization
 
+  maxPopulation             => 3,
+
   reproductionCrossbreeding => 1,  # enables crossbreeding
   reproductionMutation      => 1,  # enables random mutations
-  mutationRandMax           => 10, # TODO one var in % , see also mutationRandThreshold
-  mutationRandThreshold     => 8,  # TODO one var in % , see also mutationRandMax
+  mutationRandMax           => 10,
+  mutationRandThreshold     => 8,
 
   maxIteration              => 100,
   maxSameResCnt             => 10
@@ -145,7 +134,7 @@ my $getCostWithMultiNodesI = 0; # helper for debugging
 
 sub getCostWithMultiNodes {
   Log(SLog::ALG_EVAL_GSWN, "getCostWithMultiNodes");
-  ++$getCostWithMultiNodesI; # 13 -> res.totalCost=20
+  ++$getCostWithMultiNodesI;
 
   # my ($limit, %genes) = @_;
   my ($limit, $genesRef) = @_;
@@ -210,20 +199,13 @@ sub getCostWithNodes {
   my %node = %{$dG{$nodeI}};
   my $neighbourCost = 0;
   my %curVisited = (%preVisited);
-  # TODO: should or should not I use 1 or 2 foreach loops sequentially?
-  #  Because it may result in breaking on already visited nodes - "$preVisited{$neighbour} == 0" in case of loop in recursion
-  #  Do I miss something? The simple example is insufficient for this Use Case, it would need some with possible loops..
 
-  # idk if i need to copy the '%preVisited', maybe just '$curVisited{$nodeI}++;' now and '$curVisited{$nodeI}--;' later?
   $curVisited{$nodeI}++;
-  # also add curent cost, TODO rename variable
 
-  # TODO sort is quite expensive -> parametrization...
   foreach my $neighbourI (sort (keys %node)) {
     my $neighbourDistance = $node{$neighbourI};
     if ($preVisited{$neighbourI} == 0 && $limit >= $neighbourDistance) {
       $neighbourCost += $dWi[$neighbourI - 1];
-      # %visitedNodes = (%visitedNodes, ($nodeI));
       $curVisited{$nodeI} = 1;
       my $newLimit = $limit - $node{$neighbourI};
       if ($newLimit > 0) {
@@ -232,14 +214,12 @@ sub getCostWithNodes {
         %curVisited = (%curVisited, %newVisitedNodes);
       }
       elsif ($newLimit == 0) {
-        # TODO brainstorm if propagation of curVisited should not be somewhere else so i could avoid elseif above
         $curVisited{$neighbourI} = 1;
       }
     }
 
   }
   Log(SLog::ALG_EVAL_GSWN_SUM_VN, "Node: $nodeI Cost: $neighbourCost VisNodes: %visitedNodes");
-  # TODO: @visitedNodes not contains %curVisited
   return($neighbourCost, %curVisited);
 }
 
@@ -253,30 +233,10 @@ sub preparePreVisited {
 }
 
 sub randIndex {
-  # return int(rand((keys %dG) - 1)) + 1;
-  # my %di = %_;
-  # my %di  = %{shift()};
   my (%di) = @_;
-  # our %di; local *di = \$_[0];
-  # my %di = %diR;
-  # return int(rand(keys %di)) + 1;
-  # return $di{(keys %di)[rand keys %di]};
-  # my $r = rand keys %di;
-  # my @da = keys %di;
-  # my $k = $di[rand @da];
   my @hash_keys = keys %di;
   my $k = $hash_keys[rand @hash_keys];
   return $k;
-}
-
-sub isResOk {
-  my @curResult = @_;
-  if (@curResult == 0) {return 0;} # if empty = not executed yet, then result is not ok
-  # TODO other ifs ...
-  # here i should have some conditions like:
-  # - compare max length of path resulting subgraph
-  # - compare max tree width of resulting subgraph (if its similar to tree)
-  return 1;
 }
 
 
@@ -295,7 +255,6 @@ sub isSufficient {
       return 0;
     }
     else {
-      # TODO if 1) X% of current population match previous genome, X>90?
       $sameResCnt++;
       if ($sameResCnt > $settings{maxSameResCnt}) {
         Log(SLog::ALG_EVO_LOOP_ISSIUF, "Breaking... at $iteration with res.avgCost: $res{'avgCost'}");
@@ -322,8 +281,7 @@ sub randomizeGenes {
   my %genes = (
     'startPos'      => randIndex(%dG),                     # alely [1..4]
     'nextPosOffset' => randIndex(%dG) % (scalar(%dG) - 1), # alely [1..3]
-    # TODO ^this will not work for more than 2 locations .. '(scalar(%dG) - 1)' should be replaced with freeNodesCnt
-    # 'reuseCovered'  => int(rand(1)),                               # TODO
+    # 'reuseCovered'  => int(rand(1)),
   );
   return %genes;
 }
@@ -333,21 +291,14 @@ sub testGenes {
   my %genes = (
     'startPos'      => 4, # alely [1..4]
     'nextPosOffset' => 1, # alely [1..3]
-    # 'reuseCovered'  => int(rand(1)),                               # TODO
+    # 'reuseCovered'  => int(rand(1)),
   );
   return %genes;
 }
 
 
 sub evalEvolutionAlg {
-  # my %genes = (
-  #   startPos      => 1, # alely [1..4]
-  #   nextPosOffset => 1, # alely [1..3]
-  # );
-
-  # Population will be always 10
-  my $populationMax = 3;
-  my $populationCnt = $populationMax;
+  my $populationCnt = $settings{maxPopulation};
   my %populationRes = ();
 
   # generovani(P_0)
@@ -361,9 +312,9 @@ sub evalEvolutionAlg {
   my $t = 0;
   while (!isSufficient(\%populationRes)) {
     # while 'není splněna podmínka ukončení' do
-    # vyhodnocení(P_t) # happens in isSufficient();
+    # vyhodnocení(P_t) # in isSufficient();
     # P′_t=výběr(Pt);(strategie výběru)
-    # Contest... or smth like that, for simplicity sake I will just take results better then avg ..
+    # Turnaj/Contest... or smth like that, for simplicity sake I will just take results better or equal to avg totalCost
     my $totalCost = 0;
     for (1 .. $populationCnt) {
       $totalCost += $populationRes{$_}{'totalCost'};
@@ -388,7 +339,6 @@ sub evalEvolutionAlg {
       my $parent1Genes;
       if ($settings{reproductionCrossbreeding}) {
         $infoMsg .= "Crossbreeding genes for $_: \n";
-        # TODO dont use same parent..?
         $parent1Genes = $desiredParents{randIndex(%desiredParents)}{'genes'};
         my $parent2Genes = $desiredParents{randIndex(%desiredParents)}{'genes'};
 
@@ -430,7 +380,7 @@ sub evalEvolutionAlg {
     # Is this the same as generating for P_0?
     # I think this is just picking some parents with children, but I am not sure...
     # What I do is replace all parents, but (some) genes persist so results are the same.
-    # Pt+1=nahrazení(Pt,P′t); # idk what to do with this one considering the previous one ...
+    # Pt+1=nahrazení(Pt,P′t);
     %populationRes = ();
 
     for (1 .. $populationCnt) {
@@ -446,7 +396,7 @@ sub evalEvolutionAlg {
     Log(SLog::ALG_EVO_LOOP, \%newPopulationsGenes);
     Log(SLog::ALG_EVO_LOOP, "populationRes");
     Log(SLog::ALG_EVO_LOOP, \%populationRes);
-    # (strategie náhrady)t=t+1
+    # (strategie náhrady)t=t+1 # default
   }
 }
 
