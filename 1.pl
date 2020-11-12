@@ -22,8 +22,8 @@ use Data::Dumper qw(Dumper);
 use constant {
   ALG                  => 'Alg',
   ALG_EVO              => 'ALG_EVO',
-  ALG_EVO_LOOP     => 'ALG_EVO_LOOP',
-  ALG_EVO_LOOP_ISSIUF         => 'EVO_ISSUF',
+  ALG_EVO_LOOP         => 'ALG_EVO_LOOP',
+  ALG_EVO_LOOP_ISSIUF  => 'EVO_ISSUF',
   # ALG_EVO_LOOP_ISSUF   => 'ALG_EVO_LOOP_ISSUF',
 
   ALG_EVAL_GSWN        => 'ALG_EVAL_GSWN',
@@ -107,6 +107,24 @@ my @dWi = (10, 5, 1, 5);
 my $dN = 4;
 my $dV = 4;
 my $dM = 1;
+
+
+# TODO pass arguments from cmd line
+my %settings = (
+  isTest                    => 0, # test disables initial randomization
+
+  reproductionCrossbreeding => 1,  # enables crossbreeding
+  reproductionMutation      => 1,  # enables random mutations
+  mutationRandMax           => 10, # TODO one var in % , see also mutationRandThreshold
+  mutationRandThreshold     => 8,  # TODO one var in % , see also mutationRandMax
+
+  maxIteration              => 100,
+  maxSameResCnt             => 10
+);
+
+my %bestResSoFar = ();
+my $iteration = 0;
+my $sameResCnt = 0;
 
 # choose initial solution
 # my $rS=1; # for debug purposes, because using rand() for initial debug is not a good idea...
@@ -261,18 +279,12 @@ sub isResOk {
   return 1;
 }
 
-# TODO array for multiple best solutions...
-my %bestResSoFar = ();
-my $iteration = 0;
-my $maxIteration = 100;
-my $maxSameResCnt = 10;
-my $sameResCnt = 0;
 
 sub isSufficient {
   my %res = %{shift()};
   $iteration++;
-  if ($iteration > $maxIteration) {
-    Log(SLog::ALG_EVO_LOOP_ISSIUF, "Overiterated - ending ($iteration > $maxIteration)");
+  if ($iteration > $settings{maxIteration}) {
+    Log(SLog::ALG_EVO_LOOP_ISSIUF, "Overiterated - ending ($iteration > $settings{maxIteration})");
     return 1;
   }
 
@@ -285,7 +297,7 @@ sub isSufficient {
     else {
       # TODO if 1) X% of current population match previous genome, X>90?
       $sameResCnt++;
-      if ($sameResCnt > $maxSameResCnt) {
+      if ($sameResCnt > $settings{maxSameResCnt}) {
         Log(SLog::ALG_EVO_LOOP_ISSIUF, "Breaking... at $iteration with res.avgCost: $res{'avgCost'}");
         Log(SLog::ALG_EVO_LOOP_ISSIUF, \%res);
         return 1;
@@ -326,14 +338,6 @@ sub testGenes {
   return %genes;
 }
 
-# TODO pass arguments from cmd line
-my %settings = (
-    isTest => 0,
-    mutationRandMax => 10, # TODO one var in %
-    mutationRandThreshold => 8, # TODO one var in %
-    reproductionCrossbreeding => 1,
-    reproductionMutation => 1,
-);
 
 sub evalEvolutionAlg {
   # my %genes = (
