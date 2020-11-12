@@ -239,7 +239,10 @@ sub randIndex {
   return $k;
 }
 
-
+# tato funkce kontorluje jestli:
+# 1. byl překroček horní limit iterací 'if ($iteration > $settings{maxIteration})'
+# 2. výsledek je dostatečně konstatní 'if ($sameResCnt > $settings{maxSameResCnt})'
+#   - konstantnost je nabourávána mutacemi, viz dole kus kódu s mutací genů
 sub isSufficient {
   my %res = %{shift()};
   $iteration++;
@@ -281,7 +284,7 @@ sub randomizeGenes {
   my %genes = (
     'startPos'      => randIndex(%dG),                     # alely [1..4]
     'nextPosOffset' => randIndex(%dG) % (scalar(%dG) - 1), # alely [1..3]
-    # 'reuseCovered'  => int(rand(1)),
+    # 'reuseCovered'  => int(rand(1)), # návrh na další gen, boolean, který určije jestli se můžou použít již neobsazené, ale pokryté lokace
   );
   return %genes;
 }
@@ -291,7 +294,7 @@ sub testGenes {
   my %genes = (
     'startPos'      => 4, # alely [1..4]
     'nextPosOffset' => 1, # alely [1..3]
-    # 'reuseCovered'  => int(rand(1)),
+    # 'reuseCovered'  => int(rand(1)), # návrh na další gen, boolean, který určije jestli se můžou použít již neobsazené, ale pokryté lokace
   );
   return %genes;
 }
@@ -300,26 +303,33 @@ sub testGenes {
 sub evalEvolutionAlg {
   my $populationCnt = $settings{maxPopulation};
   my %populationRes = ();
+  # Stojí za zmímku, že cíleně uchovávám populaci konstantní velikosti, všichni rodiče jsou nahrazeni dětmi některých z nich.
 
   # generovani(P_0)
+  # vygeneruji náhodné geny a populaci 0 s nimi
   for (1 .. $populationCnt) {
-    # my %genes = randomizeGenes();
     my %genes = $settings{isTest} ? testGenes() : randomizeGenes();
     my %singleRes = getCostWithMultiNodes($dV, \%genes);
     $populationRes{$_} = \%singleRes;
   }
-
-  my $t = 0;
+  # Infromativně: měl jsem trochu problém s neokomentovanými kusy pseudokódu
+  # došel jsem k tomu, že je možné, že jsem některé body 'while' smyčky posunul,
+  # např. mě nepoužívám index 't', prootže kdybych chtěl indexovat, tak použiji smyčku for s prázdkou pomdínkou 'for (;;)'
+  # Celkem si nejsem jist jestli užití do-while není lepší, ale jak je to v zadaní, tak se k tomu snažím co nejvíce přiblížit.
   while (!isSufficient(\%populationRes)) {
     # while 'není splněna podmínka ukončení' do
-    # vyhodnocení(P_t) # in isSufficient();
-    # P′_t=výběr(Pt);(strategie výběru)
-    # Turnaj/Contest... or smth like that, for simplicity sake I will just take results better or equal to avg totalCost
+    # vyhodnocení(P_t) # zde nebyl komentář, mám za to, že vyhodnocení je getCostWithMultiNodes.
+    # P′_t=výběr(Pt); (strategie výběru)
+    # Turnaj
+    # prakticky vezmu "lepší půlku" a to tak, že porovnám průměr 'avgCost' s 'totalCost'
+    # 'avgCost' musím nejdříve spočítat...
     my $totalCost = 0;
     for (1 .. $populationCnt) {
       $totalCost += $populationRes{$_}{'totalCost'};
     }
     my $avgCost = $totalCost / $populationCnt;
+
+    # zde získám vybrané rodiče splňující kritérium, že jejich 'totalCost' >= 'avgCost'
     my %desiredParents = ();
     Log(SLog::ALG_EVO_LOOP, "All parents:");
     Log(SLog::ALG_EVO_LOOP, \%populationRes);
@@ -332,16 +342,19 @@ sub evalEvolutionAlg {
     Log(SLog::ALG_EVO_LOOP, \%desiredParents);
 
     # P′t=reprodukce(P′t);(strategie reprodukce)
-    # reproduction, crossbreeding
+    # Nejprve křížím a pak mutuji.
+    # Mutace je nutná, protože z 1. generace při velké smůle můžu mít špatné geny a tedy se nikdy nedostat k optimálnímu řešení
+    # vygeneruji stejný počet genů potomků jako bylo rodičů
     my %newPopulationsGenes = ();
     for (1 .. $populationCnt) {
       my $infoMsg = "";
       my $parent1Genes;
+      # křížení
       if ($settings{reproductionCrossbreeding}) {
         $infoMsg .= "Crossbreeding genes for $_: \n";
         $parent1Genes = $desiredParents{randIndex(%desiredParents)}{'genes'};
         my $parent2Genes = $desiredParents{randIndex(%desiredParents)}{'genes'};
-
+        # 1. získám vhodné geny pro potomka z 2. rodičů, z kterého je to 50/50
         foreach my $geneName (keys %$parent2Genes) {
           if (int(rand(2)) % 2) {
             $newPopulationsGenes{$_}{$geneName} = $parent1Genes->{$geneName};
@@ -353,14 +366,13 @@ sub evalEvolutionAlg {
           $infoMsg .= "$newPopulationsGenes{$_}{$geneName}\n";
         }
       }
+      # mutuji
       if ($settings{reproductionMutation}) {
-        # mutation, why as well as crossbreeding? Because with low initial population I can get really bad results and so
-        # never get to the correct result, this brings some possibility of correcting...
         $infoMsg .= "Mutating genes for $_: \n";
         # 'keys %$parent1Genes' will work because number of genes is always the same (not like in real life..)
         foreach my $geneName (keys %$parent1Genes) {
+          # zde je promínka s pravděpodobností mutace
           if (int(rand($settings{mutationRandMax})) >= $settings{mutationRandThreshold}) {
-            # pst 1/10
             my $newRandGeneVal = 1;
             if ($geneName eq 'startPos') {
               $newRandGeneVal = randIndex(%dG);
@@ -376,11 +388,10 @@ sub evalEvolutionAlg {
       Log(SLog::ALG_EVO_LOOP, $infoMsg);
     }
 
-    # vyhodnocení(P′t); # there is no comment in lectures :(
-    # Is this the same as generating for P_0?
-    # I think this is just picking some parents with children, but I am not sure...
-    # What I do is replace all parents, but (some) genes persist so results are the same.
+    # vyhodnocení(P′t); # v průsvitkách není komentář, nejsem si jist co si pod tím představit...
     # Pt+1=nahrazení(Pt,P′t);
+    # nahradím starou populaci populací s nově získanými geny.
+    # Napadlo mě jestli vyhodnocení a nahrazení není chováním stejné jako generovani(P_0) s rozdílem vstupu, ale nevím - není to specifikováno.
     %populationRes = ();
 
     for (1 .. $populationCnt) {
@@ -390,7 +401,7 @@ sub evalEvolutionAlg {
     }
     $populationRes{'totalCost'} = $totalCost;
     $populationRes{'avgCost'} = $avgCost;
-
+    # A samozřejmě vypíši mezivýsledky.
     Log(SLog::ALG_EVO_LOOP, "Iter: " . $iteration . " AvgCost: " . $avgCost . " Res:");
     Log(SLog::ALG_EVO_LOOP, "newPopulationsGenes");
     Log(SLog::ALG_EVO_LOOP, \%newPopulationsGenes);
