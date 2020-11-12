@@ -1,0 +1,2955 @@
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVO_LOOP $VAR1 = 'All parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '1' => {
+                   '1' => {
+                            'cost' => 20,
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 0
+                                          }
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 0,
+                                'startPos' => '1'
+                              },
+                   'totalCost' => 20
+                 },
+          '2' => {
+                   '1' => {
+                            'cost' => 11,
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 0,
+                                            '3' => 1,
+                                            '4' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '3'
+                              },
+                   'totalCost' => 11
+                 },
+          '3' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              }
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'AvgCost: 15.6666666666667 ; Desired parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              }
+                 },
+          '1' => {
+                   '1' => {
+                            'cost' => 20,
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 0
+                                          }
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 0,
+                                'startPos' => '1'
+                              },
+                   'totalCost' => 20
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 1: 
+  - startPos: => 2
+  - nextPosOffset: => 1
+Mutating genes for 1: 
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 2: 
+  - startPos: => 2
+  - nextPosOffset: => 1
+Mutating genes for 2: 
+  - startPos: 2 => 2
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 3: 
+  - startPos: => 2
+  - nextPosOffset: => 1
+Mutating genes for 3: 
+';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVO_LOOP $VAR1 = 'Iter: 1 AvgCost: 15.6666666666667 Res:';
+ALG_EVO_LOOP $VAR1 = 'newPopulationsGenes';
+ALG_EVO_LOOP $VAR1 = {
+          '1' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '2'
+                 },
+          '2' => {
+                   'startPos' => '2',
+                   'nextPosOffset' => 1
+                 },
+          '3' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '2'
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'populationRes';
+ALG_EVO_LOOP $VAR1 = {
+          'totalCost' => 47,
+          '2' => {
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '2' => 1,
+                                            '1' => 1
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 },
+          'avgCost' => '15.6666666666667',
+          '3' => {
+                   'totalCost' => 16,
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          }
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'All parents:';
+ALG_EVO_LOOP $VAR1 = {
+          'totalCost' => 47,
+          '2' => {
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '2' => 1,
+                                            '1' => 1
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 },
+          'avgCost' => '15.6666666666667',
+          '3' => {
+                   'totalCost' => 16,
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          }
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'AvgCost: 16 ; Desired parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   'totalCost' => 16,
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          }
+                 },
+          '1' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 },
+          '2' => {
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '2' => 1,
+                                            '1' => 1
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   'totalCost' => 16
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 1: 
+  - nextPosOffset: => 1
+  - startPos: => 2
+Mutating genes for 1: 
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 2: 
+  - nextPosOffset: => 1
+  - startPos: => 2
+Mutating genes for 2: 
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 3: 
+  - startPos: => 2
+  - nextPosOffset: => 1
+Mutating genes for 3: 
+';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVO_LOOP $VAR1 = 'Iter: 2 AvgCost: 16 Res:';
+ALG_EVO_LOOP $VAR1 = 'newPopulationsGenes';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   'startPos' => '2',
+                   'nextPosOffset' => 1
+                 },
+          '1' => {
+                   'startPos' => '2',
+                   'nextPosOffset' => 1
+                 },
+          '2' => {
+                   'startPos' => '2',
+                   'nextPosOffset' => 1
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'populationRes';
+ALG_EVO_LOOP $VAR1 = {
+          'totalCost' => 48,
+          '2' => {
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          }
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   'totalCost' => 16
+                 },
+          'avgCost' => 16,
+          '3' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '2' => 1,
+                                            '1' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   'totalCost' => 16
+                 }
+        };
+EVO_ISSUF $VAR1 = 'Continuing ... res.avgCost: 16 > bestResSoFar.avgCost: 15.6666666666667';
+ALG_EVO_LOOP $VAR1 = 'All parents:';
+ALG_EVO_LOOP $VAR1 = {
+          'totalCost' => 48,
+          '2' => {
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          }
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   'totalCost' => 16
+                 },
+          'avgCost' => 16,
+          '3' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '2' => 1,
+                                            '1' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   'totalCost' => 16
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'AvgCost: 16 ; Desired parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '2' => 1,
+                                            '1' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          }
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   'totalCost' => 16
+                 },
+          '2' => {
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 1: 
+  - startPos: => 2
+  - nextPosOffset: => 1
+Mutating genes for 1: 
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 2: 
+  - nextPosOffset: => 1
+  - startPos: => 2
+Mutating genes for 2: 
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 3: 
+  - startPos: => 2
+  - nextPosOffset: => 1
+Mutating genes for 3: 
+';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVO_LOOP $VAR1 = 'Iter: 3 AvgCost: 16 Res:';
+ALG_EVO_LOOP $VAR1 = 'newPopulationsGenes';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   'startPos' => '2',
+                   'nextPosOffset' => 1
+                 },
+          '1' => {
+                   'startPos' => '2',
+                   'nextPosOffset' => 1
+                 },
+          '2' => {
+                   'startPos' => '2',
+                   'nextPosOffset' => 1
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'populationRes';
+ALG_EVO_LOOP $VAR1 = {
+          'totalCost' => 48,
+          '3' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '3' => 1,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '4' => 0
+                                          }
+                          },
+                   'totalCost' => 16
+                 },
+          'avgCost' => 16,
+          '2' => {
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1
+                                          }
+                          },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   'totalCost' => 16
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'All parents:';
+ALG_EVO_LOOP $VAR1 = {
+          'totalCost' => 48,
+          '3' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '3' => 1,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '4' => 0
+                                          }
+                          },
+                   'totalCost' => 16
+                 },
+          'avgCost' => 16,
+          '2' => {
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1
+                                          }
+                          },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   'totalCost' => 16
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'AvgCost: 16 ; Desired parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '1' => {
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   'totalCost' => 16
+                 },
+          '2' => {
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1
+                                          }
+                          },
+                   'totalCost' => 16
+                 },
+          '3' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '3' => 1,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '4' => 0
+                                          }
+                          },
+                   'totalCost' => 16
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 1: 
+  - nextPosOffset: => 1
+  - startPos: => 2
+Mutating genes for 1: 
+  - nextPosOffset: 1 => 1
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 2: 
+  - nextPosOffset: => 1
+  - startPos: => 2
+Mutating genes for 2: 
+  - startPos: 2 => 2
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 3: 
+  - nextPosOffset: => 1
+  - startPos: => 2
+Mutating genes for 3: 
+';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVO_LOOP $VAR1 = 'Iter: 4 AvgCost: 16 Res:';
+ALG_EVO_LOOP $VAR1 = 'newPopulationsGenes';
+ALG_EVO_LOOP $VAR1 = {
+          '2' => {
+                   'startPos' => '2',
+                   'nextPosOffset' => 1
+                 },
+          '1' => {
+                   'startPos' => '2',
+                   'nextPosOffset' => 1
+                 },
+          '3' => {
+                   'startPos' => '2',
+                   'nextPosOffset' => 1
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'populationRes';
+ALG_EVO_LOOP $VAR1 = {
+          '2' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              }
+                 },
+          'avgCost' => 16,
+          '3' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          }
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   'totalCost' => 16
+                 },
+          'totalCost' => 48
+        };
+ALG_EVO_LOOP $VAR1 = 'All parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '2' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              }
+                 },
+          'avgCost' => 16,
+          '3' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          }
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   'totalCost' => 16
+                 },
+          'totalCost' => 48
+        };
+ALG_EVO_LOOP $VAR1 = 'AvgCost: 16 ; Desired parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '2' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              }
+                 },
+          '3' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          }
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   'totalCost' => 16
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 1: 
+  - startPos: => 2
+  - nextPosOffset: => 1
+Mutating genes for 1: 
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 2: 
+  - nextPosOffset: => 1
+  - startPos: => 2
+Mutating genes for 2: 
+  - nextPosOffset: 1 => 1
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 3: 
+  - nextPosOffset: => 1
+  - startPos: => 2
+Mutating genes for 3: 
+';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVO_LOOP $VAR1 = 'Iter: 5 AvgCost: 16 Res:';
+ALG_EVO_LOOP $VAR1 = 'newPopulationsGenes';
+ALG_EVO_LOOP $VAR1 = {
+          '2' => {
+                   'startPos' => '2',
+                   'nextPosOffset' => 1
+                 },
+          '1' => {
+                   'startPos' => '2',
+                   'nextPosOffset' => 1
+                 },
+          '3' => {
+                   'startPos' => '2',
+                   'nextPosOffset' => 1
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'populationRes';
+ALG_EVO_LOOP $VAR1 = {
+          'totalCost' => 48,
+          '2' => {
+                   'totalCost' => 16,
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1
+                                          }
+                          }
+                 },
+          '1' => {
+                   'totalCost' => 16,
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '3' => 1,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          }
+                 },
+          'avgCost' => 16,
+          '3' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '1' => 1,
+                                            '2' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   'totalCost' => 16
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'All parents:';
+ALG_EVO_LOOP $VAR1 = {
+          'totalCost' => 48,
+          '2' => {
+                   'totalCost' => 16,
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1
+                                          }
+                          }
+                 },
+          '1' => {
+                   'totalCost' => 16,
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '3' => 1,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          }
+                 },
+          'avgCost' => 16,
+          '3' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '1' => 1,
+                                            '2' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   'totalCost' => 16
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'AvgCost: 16 ; Desired parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '1' => 1,
+                                            '2' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   'totalCost' => 16,
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '3' => 1,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          }
+                 },
+          '2' => {
+                   'totalCost' => 16,
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1
+                                          }
+                          }
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 1: 
+  - startPos: => 2
+  - nextPosOffset: => 1
+Mutating genes for 1: 
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 2: 
+  - startPos: => 2
+  - nextPosOffset: => 1
+Mutating genes for 2: 
+  - nextPosOffset: 1 => 0
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 3: 
+  - nextPosOffset: => 1
+  - startPos: => 2
+Mutating genes for 3: 
+';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVO_LOOP $VAR1 = 'Iter: 6 AvgCost: 16 Res:';
+ALG_EVO_LOOP $VAR1 = 'newPopulationsGenes';
+ALG_EVO_LOOP $VAR1 = {
+          '1' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '2'
+                 },
+          '2' => {
+                   'startPos' => '2',
+                   'nextPosOffset' => 0
+                 },
+          '3' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '2'
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'populationRes';
+ALG_EVO_LOOP $VAR1 = {
+          'totalCost' => 48,
+          '3' => {
+                   'totalCost' => 16,
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          }
+                          }
+                 },
+          'avgCost' => 16,
+          '2' => {
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 0
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              }
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'All parents:';
+ALG_EVO_LOOP $VAR1 = {
+          'totalCost' => 48,
+          '3' => {
+                   'totalCost' => 16,
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          }
+                          }
+                 },
+          'avgCost' => 16,
+          '2' => {
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 0
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              }
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'AvgCost: 16 ; Desired parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '1' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              }
+                 },
+          '2' => {
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 0
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 },
+          '3' => {
+                   'totalCost' => 16,
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          }
+                          }
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 1: 
+  - nextPosOffset: => 1
+  - startPos: => 2
+Mutating genes for 1: 
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 2: 
+  - nextPosOffset: => 1
+  - startPos: => 2
+Mutating genes for 2: 
+  - startPos: 2 => 2
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 3: 
+  - startPos: => 2
+  - nextPosOffset: => 1
+Mutating genes for 3: 
+';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVO_LOOP $VAR1 = 'Iter: 7 AvgCost: 16 Res:';
+ALG_EVO_LOOP $VAR1 = 'newPopulationsGenes';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   'startPos' => '2',
+                   'nextPosOffset' => 1
+                 },
+          '2' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '2'
+                 },
+          '1' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '2'
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'populationRes';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 },
+          'avgCost' => 16,
+          '2' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1
+                                          }
+                          },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              }
+                 },
+          'totalCost' => 48
+        };
+ALG_EVO_LOOP $VAR1 = 'All parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 },
+          'avgCost' => 16,
+          '2' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1
+                                          }
+                          },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              }
+                 },
+          'totalCost' => 48
+        };
+ALG_EVO_LOOP $VAR1 = 'AvgCost: 16 ; Desired parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '2' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1
+                                          }
+                          },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              }
+                 },
+          '3' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 1: 
+  - nextPosOffset: => 1
+  - startPos: => 2
+Mutating genes for 1: 
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 2: 
+  - nextPosOffset: => 1
+  - startPos: => 2
+Mutating genes for 2: 
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 3: 
+  - nextPosOffset: => 1
+  - startPos: => 2
+Mutating genes for 3: 
+';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVO_LOOP $VAR1 = 'Iter: 8 AvgCost: 16 Res:';
+ALG_EVO_LOOP $VAR1 = 'newPopulationsGenes';
+ALG_EVO_LOOP $VAR1 = {
+          '1' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '2'
+                 },
+          '2' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '2'
+                 },
+          '3' => {
+                   'startPos' => '2',
+                   'nextPosOffset' => 1
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'populationRes';
+ALG_EVO_LOOP $VAR1 = {
+          'totalCost' => 48,
+          '2' => {
+                   'totalCost' => 16,
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '2' => 1,
+                                            '1' => 1
+                                          }
+                          }
+                 },
+          '1' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '1' => 1,
+                                            '2' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   'totalCost' => 16
+                 },
+          'avgCost' => 16,
+          '3' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '1' => 1,
+                                            '2' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   'totalCost' => 16
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'All parents:';
+ALG_EVO_LOOP $VAR1 = {
+          'totalCost' => 48,
+          '2' => {
+                   'totalCost' => 16,
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '2' => 1,
+                                            '1' => 1
+                                          }
+                          }
+                 },
+          '1' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '1' => 1,
+                                            '2' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   'totalCost' => 16
+                 },
+          'avgCost' => 16,
+          '3' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '1' => 1,
+                                            '2' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   'totalCost' => 16
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'AvgCost: 16 ; Desired parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '1' => 1,
+                                            '2' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   'totalCost' => 16
+                 },
+          '2' => {
+                   'totalCost' => 16,
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '2' => 1,
+                                            '1' => 1
+                                          }
+                          }
+                 },
+          '1' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '3' => 1,
+                                            '1' => 1,
+                                            '2' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   'totalCost' => 16
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 1: 
+  - nextPosOffset: => 1
+  - startPos: => 2
+Mutating genes for 1: 
+  - startPos: 2 => 2
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 2: 
+  - nextPosOffset: => 1
+  - startPos: => 2
+Mutating genes for 2: 
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 3: 
+  - startPos: => 2
+  - nextPosOffset: => 1
+Mutating genes for 3: 
+  - nextPosOffset: 1 => 1
+';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVO_LOOP $VAR1 = 'Iter: 9 AvgCost: 16 Res:';
+ALG_EVO_LOOP $VAR1 = 'newPopulationsGenes';
+ALG_EVO_LOOP $VAR1 = {
+          '2' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '2'
+                 },
+          '1' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '2'
+                 },
+          '3' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '2'
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'populationRes';
+ALG_EVO_LOOP $VAR1 = {
+          'totalCost' => 48,
+          '1' => {
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 },
+          '2' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'visNodes' => {
+                                            '3' => 1,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              }
+                 },
+          'avgCost' => 16,
+          '3' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1
+                                          }
+                          },
+                   'totalCost' => 16
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'All parents:';
+ALG_EVO_LOOP $VAR1 = {
+          'totalCost' => 48,
+          '1' => {
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 },
+          '2' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'visNodes' => {
+                                            '3' => 1,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              }
+                 },
+          'avgCost' => 16,
+          '3' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1
+                                          }
+                          },
+                   'totalCost' => 16
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'AvgCost: 16 ; Desired parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '1' => {
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'totalCost' => 16
+                 },
+          '2' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'visNodes' => {
+                                            '3' => 1,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              }
+                 },
+          '3' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 0,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 1
+                                          }
+                          },
+                   'totalCost' => 16
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 1: 
+  - startPos: => 2
+  - nextPosOffset: => 1
+Mutating genes for 1: 
+  - nextPosOffset: 1 => 1
+  - startPos: 2 => 1
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 2: 
+  - startPos: => 2
+  - nextPosOffset: => 1
+Mutating genes for 2: 
+  - startPos: 2 => 2
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 3: 
+  - nextPosOffset: => 1
+  - startPos: => 2
+Mutating genes for 3: 
+';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVO_LOOP $VAR1 = 'Iter: 10 AvgCost: 16 Res:';
+ALG_EVO_LOOP $VAR1 = 'newPopulationsGenes';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   'startPos' => '2',
+                   'nextPosOffset' => 1
+                 },
+          '1' => {
+                   'startPos' => '1',
+                   'nextPosOffset' => 1
+                 },
+          '2' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '2'
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'populationRes';
+ALG_EVO_LOOP $VAR1 = {
+          '1' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '3' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '4' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'totalCost' => 20
+                 },
+          '2' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          }
+                          },
+                   'totalCost' => 16
+                 },
+          'avgCost' => 16,
+          '3' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'visNodes' => {
+                                            '3' => 1,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              }
+                 },
+          'totalCost' => 48
+        };
+ALG_EVO_LOOP $VAR1 = 'All parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '1' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '3' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '4' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'totalCost' => 20
+                 },
+          '2' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '2'
+                              },
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 1,
+                                            '4' => 0
+                                          }
+                          },
+                   'totalCost' => 16
+                 },
+          'avgCost' => 16,
+          '3' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'visNodes' => {
+                                            '3' => 1,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '4' => 0
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'startPos' => '2',
+                                'nextPosOffset' => 1
+                              }
+                 },
+          'totalCost' => 48
+        };
+ALG_EVO_LOOP $VAR1 = 'AvgCost: 17.3333333333333 ; Desired parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '1' => {
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '3' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '4' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'totalCost' => 20
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 1: 
+  - nextPosOffset: => 1
+  - startPos: => 1
+Mutating genes for 1: 
+  - startPos: 1 => 3
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 2: 
+  - nextPosOffset: => 1
+  - startPos: => 1
+Mutating genes for 2: 
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 3: 
+  - nextPosOffset: => 1
+  - startPos: => 1
+Mutating genes for 3: 
+';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVO_LOOP $VAR1 = 'Iter: 11 AvgCost: 17.3333333333333 Res:';
+ALG_EVO_LOOP $VAR1 = 'newPopulationsGenes';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   'startPos' => '1',
+                   'nextPosOffset' => 1
+                 },
+          '2' => {
+                   'startPos' => '1',
+                   'nextPosOffset' => 1
+                 },
+          '1' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '3'
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'populationRes';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   '1' => {
+                            'cost' => 20,
+                            'visNodes' => {
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 0,
+                                            '4' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              },
+                   'totalCost' => 20
+                 },
+          'avgCost' => '17.3333333333333',
+          '1' => {
+                   'totalCost' => 11,
+                   'genes' => {
+                                'startPos' => '3',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'cost' => 11,
+                            'visNodes' => {
+                                            '3' => 1,
+                                            '1' => 0,
+                                            '2' => 1,
+                                            '4' => 1
+                                          }
+                          }
+                 },
+          '2' => {
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 0,
+                                            '4' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              },
+                   'totalCost' => 20
+                 },
+          'totalCost' => 52
+        };
+EVO_ISSUF $VAR1 = 'Continuing ... res.avgCost: 17.3333333333333 > bestResSoFar.avgCost: 16';
+ALG_EVO_LOOP $VAR1 = 'All parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   '1' => {
+                            'cost' => 20,
+                            'visNodes' => {
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 0,
+                                            '4' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              },
+                   'totalCost' => 20
+                 },
+          'avgCost' => '17.3333333333333',
+          '1' => {
+                   'totalCost' => 11,
+                   'genes' => {
+                                'startPos' => '3',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'cost' => 11,
+                            'visNodes' => {
+                                            '3' => 1,
+                                            '1' => 0,
+                                            '2' => 1,
+                                            '4' => 1
+                                          }
+                          }
+                 },
+          '2' => {
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 0,
+                                            '4' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              },
+                   'totalCost' => 20
+                 },
+          'totalCost' => 52
+        };
+ALG_EVO_LOOP $VAR1 = 'AvgCost: 17 ; Desired parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '2' => {
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 0,
+                                            '4' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              },
+                   'totalCost' => 20
+                 },
+          '3' => {
+                   '1' => {
+                            'cost' => 20,
+                            'visNodes' => {
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 0,
+                                            '4' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              },
+                   'totalCost' => 20
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 1: 
+  - nextPosOffset: => 1
+  - startPos: => 1
+Mutating genes for 1: 
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 2: 
+  - nextPosOffset: => 1
+  - startPos: => 1
+Mutating genes for 2: 
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 3: 
+  - nextPosOffset: => 1
+  - startPos: => 1
+Mutating genes for 3: 
+';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVO_LOOP $VAR1 = 'Iter: 12 AvgCost: 17 Res:';
+ALG_EVO_LOOP $VAR1 = 'newPopulationsGenes';
+ALG_EVO_LOOP $VAR1 = {
+          '2' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '1'
+                 },
+          '1' => {
+                   'startPos' => '1',
+                   'nextPosOffset' => 1
+                 },
+          '3' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '1'
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'populationRes';
+ALG_EVO_LOOP $VAR1 = {
+          '2' => {
+                   'totalCost' => 20,
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 0,
+                                            '4' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'startPos' => '1',
+                                'nextPosOffset' => 1
+                              }
+                 },
+          '1' => {
+                   'totalCost' => 20,
+                   '1' => {
+                            'visNodes' => {
+                                            '3' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '4' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              }
+                 },
+          'avgCost' => 17,
+          '3' => {
+                   'genes' => {
+                                'startPos' => '1',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'cost' => 20,
+                            'visNodes' => {
+                                            '3' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '4' => 1
+                                          }
+                          },
+                   'totalCost' => 20
+                 },
+          'totalCost' => 51
+        };
+ALG_EVO_LOOP $VAR1 = 'All parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '2' => {
+                   'totalCost' => 20,
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 0,
+                                            '4' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'startPos' => '1',
+                                'nextPosOffset' => 1
+                              }
+                 },
+          '1' => {
+                   'totalCost' => 20,
+                   '1' => {
+                            'visNodes' => {
+                                            '3' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '4' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              }
+                 },
+          'avgCost' => 17,
+          '3' => {
+                   'genes' => {
+                                'startPos' => '1',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'cost' => 20,
+                            'visNodes' => {
+                                            '3' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '4' => 1
+                                          }
+                          },
+                   'totalCost' => 20
+                 },
+          'totalCost' => 51
+        };
+ALG_EVO_LOOP $VAR1 = 'AvgCost: 20 ; Desired parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '2' => {
+                   'totalCost' => 20,
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 0,
+                                            '4' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'startPos' => '1',
+                                'nextPosOffset' => 1
+                              }
+                 },
+          '1' => {
+                   'totalCost' => 20,
+                   '1' => {
+                            'visNodes' => {
+                                            '3' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '4' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              }
+                 },
+          '3' => {
+                   'genes' => {
+                                'startPos' => '1',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'cost' => 20,
+                            'visNodes' => {
+                                            '3' => 0,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '4' => 1
+                                          }
+                          },
+                   'totalCost' => 20
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 1: 
+  - startPos: => 1
+  - nextPosOffset: => 1
+Mutating genes for 1: 
+  - startPos: 1 => 1
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 2: 
+  - nextPosOffset: => 1
+  - startPos: => 1
+Mutating genes for 2: 
+  - startPos: 1 => 4
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 3: 
+  - startPos: => 1
+  - nextPosOffset: => 1
+Mutating genes for 3: 
+  - nextPosOffset: 1 => 0
+';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVO_LOOP $VAR1 = 'Iter: 13 AvgCost: 20 Res:';
+ALG_EVO_LOOP $VAR1 = 'newPopulationsGenes';
+ALG_EVO_LOOP $VAR1 = {
+          '2' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '4'
+                 },
+          '1' => {
+                   'startPos' => '1',
+                   'nextPosOffset' => 1
+                 },
+          '3' => {
+                   'nextPosOffset' => 0,
+                   'startPos' => '1'
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'populationRes';
+ALG_EVO_LOOP $VAR1 = {
+          'totalCost' => 60,
+          '3' => {
+                   'totalCost' => 20,
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '3' => 0,
+                                            '2' => 1,
+                                            '1' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'startPos' => '1',
+                                'nextPosOffset' => 0
+                              }
+                 },
+          'avgCost' => 20,
+          '1' => {
+                   'totalCost' => 20,
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              },
+                   '1' => {
+                            'cost' => 20,
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '3' => 0,
+                                            '2' => 1,
+                                            '1' => 1
+                                          }
+                          }
+                 },
+          '2' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '3' => 1,
+                                            '2' => 0,
+                                            '1' => 1
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '4'
+                              }
+                 }
+        };
+EVO_ISSUF $VAR1 = 'Continuing ... res.avgCost: 20 > bestResSoFar.avgCost: 17.3333333333333';
+ALG_EVO_LOOP $VAR1 = 'All parents:';
+ALG_EVO_LOOP $VAR1 = {
+          'totalCost' => 60,
+          '3' => {
+                   'totalCost' => 20,
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '3' => 0,
+                                            '2' => 1,
+                                            '1' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'startPos' => '1',
+                                'nextPosOffset' => 0
+                              }
+                 },
+          'avgCost' => 20,
+          '1' => {
+                   'totalCost' => 20,
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              },
+                   '1' => {
+                            'cost' => 20,
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '3' => 0,
+                                            '2' => 1,
+                                            '1' => 1
+                                          }
+                          }
+                 },
+          '2' => {
+                   'totalCost' => 16,
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '3' => 1,
+                                            '2' => 0,
+                                            '1' => 1
+                                          },
+                            'cost' => 16
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '4'
+                              }
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'AvgCost: 18.6666666666667 ; Desired parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '1' => {
+                   'totalCost' => 20,
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              },
+                   '1' => {
+                            'cost' => 20,
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '3' => 0,
+                                            '2' => 1,
+                                            '1' => 1
+                                          }
+                          }
+                 },
+          '3' => {
+                   'totalCost' => 20,
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '3' => 0,
+                                            '2' => 1,
+                                            '1' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'startPos' => '1',
+                                'nextPosOffset' => 0
+                              }
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 1: 
+  - startPos: => 1
+  - nextPosOffset: => 1
+Mutating genes for 1: 
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 2: 
+  - startPos: => 1
+  - nextPosOffset: => 1
+Mutating genes for 2: 
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 3: 
+  - nextPosOffset: => 1
+  - startPos: => 1
+Mutating genes for 3: 
+';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVO_LOOP $VAR1 = 'Iter: 14 AvgCost: 18.6666666666667 Res:';
+ALG_EVO_LOOP $VAR1 = 'newPopulationsGenes';
+ALG_EVO_LOOP $VAR1 = {
+          '1' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '1'
+                 },
+          '2' => {
+                   'startPos' => '1',
+                   'nextPosOffset' => 1
+                 },
+          '3' => {
+                   'startPos' => '1',
+                   'nextPosOffset' => 1
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'populationRes';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   'totalCost' => 20,
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 0
+                                          },
+                            'cost' => 20
+                          }
+                 },
+          'avgCost' => '18.6666666666667',
+          '2' => {
+                   'totalCost' => 20,
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 0
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              }
+                 },
+          '1' => {
+                   'totalCost' => 20,
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 0,
+                                            '4' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              }
+                 },
+          'totalCost' => 56
+        };
+ALG_EVO_LOOP $VAR1 = 'All parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   'totalCost' => 20,
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 0
+                                          },
+                            'cost' => 20
+                          }
+                 },
+          'avgCost' => '18.6666666666667',
+          '2' => {
+                   'totalCost' => 20,
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 0
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              }
+                 },
+          '1' => {
+                   'totalCost' => 20,
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 0,
+                                            '4' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              }
+                 },
+          'totalCost' => 56
+        };
+ALG_EVO_LOOP $VAR1 = 'AvgCost: 20 ; Desired parents:';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   'totalCost' => 20,
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              },
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 0
+                                          },
+                            'cost' => 20
+                          }
+                 },
+          '1' => {
+                   'totalCost' => 20,
+                   '1' => {
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 0,
+                                            '4' => 1
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              }
+                 },
+          '2' => {
+                   'totalCost' => 20,
+                   '1' => {
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '2' => 1,
+                                            '1' => 1,
+                                            '3' => 0
+                                          },
+                            'cost' => 20
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              }
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 1: 
+  - nextPosOffset: => 1
+  - startPos: => 1
+Mutating genes for 1: 
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 2: 
+  - nextPosOffset: => 1
+  - startPos: => 1
+Mutating genes for 2: 
+  - startPos: 1 => 4
+';
+ALG_EVO_LOOP $VAR1 = 'Crossbreeding genes for 3: 
+  - nextPosOffset: => 1
+  - startPos: => 1
+Mutating genes for 3: 
+  - startPos: 1 => 3
+';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithMultiNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVAL_GSWN $VAR1 = 'getCostWithNodes';
+ALG_EVO_LOOP $VAR1 = 'Iter: 15 AvgCost: 20 Res:';
+ALG_EVO_LOOP $VAR1 = 'newPopulationsGenes';
+ALG_EVO_LOOP $VAR1 = {
+          '1' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '1'
+                 },
+          '2' => {
+                   'startPos' => '4',
+                   'nextPosOffset' => 1
+                 },
+          '3' => {
+                   'nextPosOffset' => 1,
+                   'startPos' => '3'
+                 }
+        };
+ALG_EVO_LOOP $VAR1 = 'populationRes';
+ALG_EVO_LOOP $VAR1 = {
+          '3' => {
+                   'totalCost' => 11,
+                   'genes' => {
+                                'startPos' => '3',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'cost' => 11,
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 0,
+                                            '3' => 1,
+                                            '4' => 1
+                                          }
+                          }
+                 },
+          'avgCost' => 20,
+          '2' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '3' => 1,
+                                            '1' => 1,
+                                            '2' => 0
+                                          }
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '4'
+                              },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   '1' => {
+                            'cost' => 20,
+                            'visNodes' => {
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 0,
+                                            '4' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              },
+                   'totalCost' => 20
+                 },
+          'totalCost' => 60
+        };
+EVO_ISSUF $VAR1 = 'Breaking... at 16 with res.avgCost: 20';
+EVO_ISSUF $VAR1 = {
+          '2' => {
+                   '1' => {
+                            'cost' => 16,
+                            'visNodes' => {
+                                            '4' => 1,
+                                            '3' => 1,
+                                            '1' => 1,
+                                            '2' => 0
+                                          }
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '4'
+                              },
+                   'totalCost' => 16
+                 },
+          '1' => {
+                   '1' => {
+                            'cost' => 20,
+                            'visNodes' => {
+                                            '1' => 1,
+                                            '2' => 1,
+                                            '3' => 0,
+                                            '4' => 1
+                                          }
+                          },
+                   'genes' => {
+                                'nextPosOffset' => 1,
+                                'startPos' => '1'
+                              },
+                   'totalCost' => 20
+                 },
+          '3' => {
+                   'totalCost' => 11,
+                   'genes' => {
+                                'startPos' => '3',
+                                'nextPosOffset' => 1
+                              },
+                   '1' => {
+                            'cost' => 11,
+                            'visNodes' => {
+                                            '2' => 1,
+                                            '1' => 0,
+                                            '3' => 1,
+                                            '4' => 1
+                                          }
+                          }
+                 },
+          'avgCost' => 20,
+          'totalCost' => 60
+        };

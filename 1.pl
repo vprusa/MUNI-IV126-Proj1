@@ -90,6 +90,12 @@ sub main {
 # nodeX => {nodeY=> d(nodeX, nodeY), ...}, ...
 # this results in duplicity of edge's weights
 # Note!: Eh, index from 1...
+# TODO ...
+# another way to store data as triplets where first 2 are vertices and third is weight
+# as in https://github.com/vprusa/MUNI-MA015-graph-algorithms/blob/e510fbe87b1c8d73f817fb13995bc3e3007f1ab3/algorithms/mst/directed/EdmondsBranching/EdmondsBranching.py#L13
+# g.e. Edges: [(1,2,4),(1,3,5),(1,4,3),(2,3,3),(2,4,5),(3,4,4)]
+# another another way is to use some strucutre to hold weight and just link it to given weight..
+# current way is convenient for fast data lookup, although that could be done with previous methods + caching or smth...
 my %dG = (
   1 => { 2 => 4, 3 => 5, 4 => 3 },
   2 => { 1 => 4, 3 => 3, 4 => 5 },
@@ -304,6 +310,7 @@ sub randomizeGenes {
   my %genes = (
     'startPos'      => randIndex(%dG),                     # alely [1..4]
     'nextPosOffset' => randIndex(%dG) % (scalar(%dG) - 1), # alely [1..3]
+    # TODO ^this will not work for more than 2 locations .. '(scalar(%dG) - 1)' should be replaced with freeNodesCnt
     # 'reuseCovered'  => int(rand(1)),                               # TODO
   );
   return %genes;
@@ -319,6 +326,7 @@ sub testGenes {
   return %genes;
 }
 
+# TODO pass arguments from cmd line
 my %settings = (
     isTest => 0,
     mutationRandMax => 10, # TODO one var in %
