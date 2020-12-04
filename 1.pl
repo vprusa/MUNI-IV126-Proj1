@@ -67,7 +67,7 @@ sub Log {
 
 sub main {
   # https://www.fi.muni.cz/~hanka/ai/prusvitky/treti.pdf
-  # ::7
+  # ::7 # TODO oprav na ::10
   evalEvolutionAlg();
 }
 
@@ -143,6 +143,7 @@ sub getCostWithMultiNodes {
   my %res = ();
   $res{'genes'} = \%genes;
 
+  # TODO !!! cele visitedNodes je neefektivni, spravne ma byt mit 1 grafa k nemy hodnoceni na uzlech v rozmezi <0,maxPocetSkladu> a kazde pokryti nejakym skladem inkrementuje uzel a pri operaci zameny skladu dekrementuji porkyti (uzel se stava tzv "kyblikem na zetony"?)
   my %visitedNodes = preparePreVisited();
   my $totalCost = 0;
   for (1 .. $dM) {
@@ -217,7 +218,6 @@ sub getCostWithNodes {
         $curVisited{$neighbourI} = 1;
       }
     }
-
   }
   Log(SLog::ALG_EVAL_GSWN_SUM_VN, "Node: $nodeI Cost: $neighbourCost VisNodes: %visitedNodes");
   return($neighbourCost, %curVisited);
@@ -299,7 +299,7 @@ sub testGenes {
   return %genes;
 }
 
-
+# TODO spatny algoritmus, vymenit casti za ES
 sub evalEvolutionAlg {
   my $populationCnt = $settings{maxPopulation};
   my %populationRes = ();
@@ -349,7 +349,7 @@ sub evalEvolutionAlg {
     for (1 .. $populationCnt) {
       my $infoMsg = "";
       my $parent1Genes;
-      # křížení
+      # křížení - TODO vyjimecne, odstranit?
       if ($settings{reproductionCrossbreeding}) {
         $infoMsg .= "Crossbreeding genes for $_: \n";
         $parent1Genes = $desiredParents{randIndex(%desiredParents)}{'genes'};
@@ -388,8 +388,6 @@ sub evalEvolutionAlg {
       Log(SLog::ALG_EVO_LOOP, $infoMsg);
     }
 
-    # vyhodnocení(P′t); # v průsvitkách není komentář, nejsem si jist co si pod tím představit...
-    # Pt+1=nahrazení(Pt,P′t);
     # nahradím starou populaci populací s nově získanými geny.
     # Napadlo mě jestli vyhodnocení a nahrazení není chováním stejné jako generovani(P_0) s rozdílem vstupu, ale nevím - není to specifikováno.
     %populationRes = ();
